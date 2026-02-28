@@ -1,0 +1,55 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add Link Sharing Feature with Copy Link and Social Share Options",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a LinkShare component with a 'Copy Link' button that copies the current page URL to the clipboard and displays visual confirmation feedback",
+      "acceptanceCriteria": [
+        "A 'Copy Link' button is visible on the page",
+        "Clicking it copies the current page URL to the clipboard",
+        "Visual feedback is shown after successful copy (e.g., button label changes to 'Copied!' for 2 seconds)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LinkShare.tsx",
+          "operation": "create",
+          "description": "Create a LinkShare component that includes a 'Copy Link' button using the Clipboard API (navigator.clipboard.writeText) to copy window.location.href. The button should show visual feedback by changing its text to 'Copied!' for 2 seconds after successful copy, then reverting to 'Copy Link'. Use shadcn/ui Button component and lucide-react icons for consistency with the existing UI. Verify the shadcn/ui component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add social share buttons for WhatsApp, Facebook, and Twitter/X to the LinkShare component that open share dialogs with the current page URL",
+      "acceptanceCriteria": [
+        "Separate share buttons for WhatsApp, Facebook, and Twitter/X are visible",
+        "Clicking each button opens the corresponding platform's share URL in a new browser tab",
+        "The current page URL is pre-populated in the share dialog for each platform"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LinkShare.tsx",
+          "operation": "modify",
+          "description": "Add three social share buttons (WhatsApp, Facebook, Twitter/X) to the LinkShare component. Each button should construct the appropriate share URL using the current page URL (window.location.href): WhatsApp uses 'https://wa.me/?text=' + encodeURIComponent(url), Facebook uses 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), and Twitter/X uses 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url). Open share URLs using window.open(shareUrl, '_blank', 'noopener,noreferrer'). Style the buttons with platform-appropriate colors and icons using lucide-react or simple text labels. Verify the shadcn/ui component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Integrate the LinkShare component into the AuthenticatedLayout header so it is visible and accessible from any page",
+      "acceptanceCriteria": [
+        "The share component is visible without scrolling on all major pages",
+        "The component does not obstruct primary content",
+        "The component is responsive and works on both mobile and desktop layouts"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AuthenticatedLayout.tsx",
+          "operation": "modify",
+          "description": "Import and add the LinkShare component to the sticky header section of AuthenticatedLayout, positioning it between the navigation items and the coin balance display. Ensure the component is visible on both desktop (inline in the header) and mobile (within the mobile menu if space is constrained). Use flexbox or grid layout to maintain proper spacing and prevent obstruction of existing header elements. The component should be accessible from all authenticated pages without requiring scrolling."
+        }
+      ]
+    }
+  ]
+}

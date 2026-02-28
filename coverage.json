@@ -1,0 +1,60 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-28T04:51:15.370Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Add a Link Share component that allows users to copy the current page URL to their clipboard via a 'Copy Link' button, with visual confirmation feedback (e.g., tooltip or button text change) after copying.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LinkShare.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LinkShare.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Add social share buttons for WhatsApp, Facebook, and Twitter/X that open the respective share dialogs in a new tab with the current page URL pre-filled as the shared link.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LinkShare.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LinkShare.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Place the Link Share component (Copy Link + social share buttons) in a prominent, visible location such as the site header or a floating share bar so it is accessible from any page.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/AuthenticatedLayout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/AuthenticatedLayout.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/AuthenticatedLayout.tsx",
+    "frontend/src/components/LinkShare.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Warm coral/orange primary with deep charcoal accents */
+        --background: 0.99 0.005 40;
+        --foreground: 0.2 0.015 30;
+        --card: 1 0 0;
+        --card-foreground: 0.2 0.015 30;
+        --popover: 1 0 0;
+        --popover-foreground: 0.2 0.015 30;
+        --primary: 0.65 0.19 35;
+        --primary-foreground: 0.99 0.005 40;
+        --secondary: 0.96 0.01 50;
+        --secondary-foreground: 0.25 0.015 30;
+        --muted: 0.96 0.008 45;
+        --muted-foreground: 0.5 0.01 30;
+        --accent: 0.72 0.15 60;
+        --accent-foreground: 0.15 0.015 30;
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.99 0 0;
+        --border: 0.92 0.008 40;
+        --input: 0.92 0.008 40;
+        --ring: 0.65 0.19 35;
+        --chart-1: 0.65 0.19 35;
+        --chart-2: 0.72 0.15 60;
+        --chart-3: 0.55 0.12 180;
+        --chart-4: 0.48 0.18 320;
+        --chart-5: 0.62 0.16 90;
+    }
+
+    .dark {
+        --background: 0.15 0.015 30;
+        --foreground: 0.97 0.005 40;
+        --card: 0.18 0.015 30;
+        --card-foreground: 0.97 0.005 40;
+        --popover: 0.2 0.015 30;
+        --popover-foreground: 0.97 0.005 40;
+        --primary: 0.68 0.19 35;
+        --primary-foreground: 0.15 0.015 30;
+        --secondary: 0.25 0.015 30;
+        --secondary-foreground: 0.97 0.005 40;
+        --muted: 0.25 0.015 30;
+        --muted-foreground: 0.6 0.01 35;
+        --accent: 0.72 0.15 60;
+        --accent-foreground: 0.97 0.005 40;
+        --destructive: 0.6 0.22 25;
+        --destructive-foreground: 0.97 0 0;
+        --border: 0.3 0.015 30;
+        --input: 0.3 0.015 30;
+        --ring: 0.68 0.19 35;
+        --chart-1: 0.68 0.19 35;
+        --chart-2: 0.72 0.15 60;
+        --chart-3: 0.6 0.12 180;
+        --chart-4: 0.55 0.18 320;
+        --chart-5: 0.65 0.16 90;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-weight: 600;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

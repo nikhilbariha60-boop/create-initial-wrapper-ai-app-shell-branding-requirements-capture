@@ -1,0 +1,79 @@
+{
+  "kind": "build_request",
+  "title": "Add Link Sharing Feature with Copy Link and Social Share Options",
+  "projectName": "Wrapper AI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add a Link Share component that allows users to copy the current page URL to their clipboard via a 'Copy Link' button, with visual confirmation feedback (e.g., tooltip or button text change) after copying.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-10",
+          "msg-12"
+        ],
+        "quotes": [
+          "Iss website ma link share options nahi ha too add this feature",
+          "A website with a link sharing feature, including a Copy Link button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Copy Link' button is visible on the page",
+        "Clicking it copies the current page URL to the clipboard",
+        "Visual feedback is shown after successful copy (e.g., button label changes to 'Copied!' for 2 seconds)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add social share buttons for WhatsApp, Facebook, and Twitter/X that open the respective share dialogs in a new tab with the current page URL pre-filled as the shared link.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-10",
+          "msg-12"
+        ],
+        "quotes": [
+          "social share options (WhatsApp, Facebook, Twitter)",
+          "A website with a link sharing feature"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Separate share buttons for WhatsApp, Facebook, and Twitter/X are visible",
+        "Clicking each button opens the corresponding platform's share URL in a new browser tab",
+        "The current page URL is pre-populated in the share dialog for each platform"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Place the Link Share component (Copy Link + social share buttons) in a prominent, visible location such as the site header or a floating share bar so it is accessible from any page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-12"
+        ],
+        "quotes": [
+          "Share button placed in a visible location (e.g., header or content area)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The share component is visible without scrolling on all major pages",
+        "The component does not obstruct primary content",
+        "The component is responsive and works on both mobile and desktop layouts"
+      ]
+    }
+  ],
+  "constraints": [
+    "Social sharing must use standard web share URLs (no third-party SDKs or external APIs)",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui"
+  ],
+  "nonGoals": [
+    "Backend changes are not required for this feature",
+    "No new authentication or coin-gating for the share feature",
+    "No native Web Share API integration (stick to URL-based sharing links)"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

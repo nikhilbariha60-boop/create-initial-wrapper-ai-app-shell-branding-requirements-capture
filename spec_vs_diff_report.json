@@ -1,0 +1,15 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-28T04:51:15.367Z",
+  "summary": "The diff implements all three requirements: a LinkShare component with Copy Link + visual feedback (REQ-1), social share buttons for WhatsApp, Facebook, and Twitter/X using standard web share URLs (REQ-2), and integration into the site header (AuthenticatedLayout) for both desktop and mobile (REQ-3). No constrained files were modified. No hallucinated features were found.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.95,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/AuthenticatedLayout.tsx",
+    "frontend/src/components/LinkShare.tsx",
+    "project_state.json"
+  ]
+}
